@@ -1,0 +1,258 @@
+def sort_descending(L):
+    """ sort the given list of numbers 
+    in descending order (big to small)  """
+    total_iteration = 0  
+    swap = True
+    while (swap): #To run the loop till all values are sorted in the list
+        swap = False
+        print('---- top of loop ----')
+        for i in range(len(L)-1): #assigning values with respect to index
+            print('check index',i,'and',i+1,' which has values',L[i],'and',L[i+1])
+            if (L[i] <= L[i+1]):#comparing vales
+                print('Swap ',L[i],'and',L[i+1])
+                L[i],L[i+1] = L[i+1],L[i] # now swap values L[i] and L[i+1] 
+	         print('List is now',L)
+                swap = True
+            else: #when sorting is not needed else will be executed
+                print('No swap needed')
+                print('List is now',L)
+        total_iteration += 1  
+    print("Total number of iteratons: ",total_iteration)  
+    return(L)
+L = [1,10,5,8,2,7,20,22,12,6]
+print('List before sorting:',L)
+print('length of L : ',len(L))
+sort_descending(L)
+print('sorted list:',L)
+
+
+Output:
+
+List before sorting: [1, 10, 5, 8, 2, 7, 20, 22, 12, 6]
+length of L :  10
+---- top of loop ----
+check index 0 and 1  which has values 1 and 10
+Swap  1 and 10
+List is now [10, 1, 5, 8, 2, 7, 20, 22, 12, 6]
+check index 1 and 2  which has values 1 and 5
+Swap  1 and 5
+List is now [10, 5, 1, 8, 2, 7, 20, 22, 12, 6]
+check index 2 and 3  which has values 1 and 8
+Swap  1 and 8
+List is now [10, 5, 8, 1, 2, 7, 20, 22, 12, 6]
+check index 3 and 4  which has values 1 and 2
+Swap  1 and 2
+List is now [10, 5, 8, 2, 1, 7, 20, 22, 12, 6]
+check index 4 and 5  which has values 1 and 7
+Swap  1 and 7
+List is now [10, 5, 8, 2, 7, 1, 20, 22, 12, 6]
+check index 5 and 6  which has values 1 and 20
+Swap  1 and 20
+List is now [10, 5, 8, 2, 7, 20, 1, 22, 12, 6]
+check index 6 and 7  which has values 1 and 22
+Swap  1 and 22
+List is now [10, 5, 8, 2, 7, 20, 22, 1, 12, 6]
+check index 7 and 8  which has values 1 and 12
+Swap  1 and 12
+List is now [10, 5, 8, 2, 7, 20, 22, 12, 1, 6]
+check index 8 and 9  which has values 1 and 6
+Swap  1 and 6
+List is now [10, 5, 8, 2, 7, 20, 22, 12, 6, 1]
+---- top of loop ----
+check index 0 and 1  which has values 10 and 5
+No swap needed
+List is now [10, 5, 8, 2, 7, 20, 22, 12, 6, 1]
+check index 1 and 2  which has values 5 and 8
+Swap  5 and 8
+List is now [10, 8, 5, 2, 7, 20, 22, 12, 6, 1]
+check index 2 and 3  which has values 5 and 2
+No swap needed
+List is now [10, 8, 5, 2, 7, 20, 22, 12, 6, 1]
+check index 3 and 4  which has values 2 and 7
+Swap  2 and 7
+List is now [10, 8, 5, 7, 2, 20, 22, 12, 6, 1]
+check index 4 and 5  which has values 2 and 20
+Swap  2 and 20
+List is now [10, 8, 5, 7, 20, 2, 22, 12, 6, 1]
+check index 5 and 6  which has values 2 and 22
+Swap  2 and 22
+List is now [10, 8, 5, 7, 20, 22, 2, 12, 6, 1]
+check index 6 and 7  which has values 2 and 12
+Swap  2 and 12
+List is now [10, 8, 5, 7, 20, 22, 12, 2, 6, 1]
+check index 7 and 8  which has values 2 and 6
+Swap  2 and 6
+List is now [10, 8, 5, 7, 20, 22, 12, 6, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [10, 8, 5, 7, 20, 22, 12, 6, 2, 1]
+---- top of loop ----
+check index 0 and 1  which has values 10 and 8
+No swap needed
+List is now [10, 8, 5, 7, 20, 22, 12, 6, 2, 1]
+check index 1 and 2  which has values 8 and 5
+No swap needed
+List is now [10, 8, 5, 7, 20, 22, 12, 6, 2, 1]
+check index 2 and 3  which has values 5 and 7
+Swap  5 and 7
+List is now [10, 8, 7, 5, 20, 22, 12, 6, 2, 1]
+check index 3 and 4  which has values 5 and 20
+Swap  5 and 20
+List is now [10, 8, 7, 20, 5, 22, 12, 6, 2, 1]
+check index 4 and 5  which has values 5 and 22
+Swap  5 and 22
+List is now [10, 8, 7, 20, 22, 5, 12, 6, 2, 1]
+check index 5 and 6  which has values 5 and 12
+Swap  5 and 12
+List is now [10, 8, 7, 20, 22, 12, 5, 6, 2, 1]
+check index 6 and 7  which has values 5 and 6
+Swap  5 and 6
+List is now [10, 8, 7, 20, 22, 12, 6, 5, 2, 1]
+check index 7 and 8  which has values 5 and 2
+No swap needed
+List is now [10, 8, 7, 20, 22, 12, 6, 5, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [10, 8, 7, 20, 22, 12, 6, 5, 2, 1]
+---- top of loop ----
+check index 0 and 1  which has values 10 and 8
+No swap needed
+List is now [10, 8, 7, 20, 22, 12, 6, 5, 2, 1]
+check index 1 and 2  which has values 8 and 7
+No swap needed
+List is now [10, 8, 7, 20, 22, 12, 6, 5, 2, 1]
+check index 2 and 3  which has values 7 and 20
+Swap  7 and 20
+List is now [10, 8, 20, 7, 22, 12, 6, 5, 2, 1]
+check index 3 and 4  which has values 7 and 22
+Swap  7 and 22
+List is now [10, 8, 20, 22, 7, 12, 6, 5, 2, 1]
+check index 4 and 5  which has values 7 and 12
+Swap  7 and 12
+List is now [10, 8, 20, 22, 12, 7, 6, 5, 2, 1]
+check index 5 and 6  which has values 7 and 6
+No swap needed
+List is now [10, 8, 20, 22, 12, 7, 6, 5, 2, 1]
+check index 6 and 7  which has values 6 and 5
+No swap needed
+List is now [10, 8, 20, 22, 12, 7, 6, 5, 2, 1]
+check index 7 and 8  which has values 5 and 2
+No swap needed
+List is now [10, 8, 20, 22, 12, 7, 6, 5, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [10, 8, 20, 22, 12, 7, 6, 5, 2, 1]
+---- top of loop ----
+check index 0 and 1  which has values 10 and 8
+No swap needed
+List is now [10, 8, 20, 22, 12, 7, 6, 5, 2, 1]
+check index 1 and 2  which has values 8 and 20
+Swap  8 and 20
+List is now [10, 20, 8, 22, 12, 7, 6, 5, 2, 1]
+check index 2 and 3  which has values 8 and 22
+Swap  8 and 22
+List is now [10, 20, 22, 8, 12, 7, 6, 5, 2, 1]
+check index 3 and 4  which has values 8 and 12
+Swap  8 and 12
+List is now [10, 20, 22, 12, 8, 7, 6, 5, 2, 1]
+check index 4 and 5  which has values 8 and 7
+No swap needed
+List is now [10, 20, 22, 12, 8, 7, 6, 5, 2, 1]
+check index 5 and 6  which has values 7 and 6
+No swap needed
+List is now [10, 20, 22, 12, 8, 7, 6, 5, 2, 1]
+check index 6 and 7  which has values 6 and 5
+No swap needed
+List is now [10, 20, 22, 12, 8, 7, 6, 5, 2, 1]
+check index 7 and 8  which has values 5 and 2
+No swap needed
+List is now [10, 20, 22, 12, 8, 7, 6, 5, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [10, 20, 22, 12, 8, 7, 6, 5, 2, 1]
+---- top of loop ----
+check index 0 and 1  which has values 10 and 20
+Swap  10 and 20
+List is now [20, 10, 22, 12, 8, 7, 6, 5, 2, 1]
+check index 1 and 2  which has values 10 and 22
+Swap  10 and 22
+List is now [20, 22, 10, 12, 8, 7, 6, 5, 2, 1]
+check index 2 and 3  which has values 10 and 12
+Swap  10 and 12
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 3 and 4  which has values 10 and 8
+No swap needed
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 4 and 5  which has values 8 and 7
+No swap needed
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 5 and 6  which has values 7 and 6
+No swap needed
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 6 and 7  which has values 6 and 5
+No swap needed
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 7 and 8  which has values 5 and 2
+No swap needed
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [20, 22, 12, 10, 8, 7, 6, 5, 2, 1]
+---- top of loop ----
+check index 0 and 1  which has values 20 and 22
+Swap  20 and 22
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 1 and 2  which has values 20 and 12
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 2 and 3  which has values 12 and 10
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 3 and 4  which has values 10 and 8
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 4 and 5  which has values 8 and 7
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 5 and 6  which has values 7 and 6
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 6 and 7  which has values 6 and 5
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 7 and 8  which has values 5 and 2
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+---- top of loop ----
+check index 0 and 1  which has values 22 and 20
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 1 and 2  which has values 20 and 12
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 2 and 3  which has values 12 and 10
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 3 and 4  which has values 10 and 8
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 4 and 5  which has values 8 and 7
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 5 and 6  which has values 7 and 6
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 6 and 7  which has values 6 and 5
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 7 and 8  which has values 5 and 2
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+check index 8 and 9  which has values 2 and 1
+No swap needed
+List is now [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
+Total number of iteratons:  8
+sorted list: [22, 20, 12, 10, 8, 7, 6, 5, 2, 1]
